@@ -28,5 +28,5 @@ To install and run the project locally, follow these steps:
 
 ## Deployed Links
 
-
+URL - `https://booker-com.netlify.app`
 
