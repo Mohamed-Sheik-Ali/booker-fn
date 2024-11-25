@@ -1,0 +1,38 @@
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px;
+  border-radius: 4px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.toast.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+}
+
+.toast.info {
+  background-color: #2196f3;
+}
+
+.toast.success {
+  background-color: #4caf50;
+}
+
+.toast.warning {
+  background-color: #ff9800;
+}
+
+.toast.error {
+  background-color: #f44336;
+}
