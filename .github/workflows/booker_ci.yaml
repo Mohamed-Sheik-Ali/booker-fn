@@ -16,6 +16,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Print build directory
+      run: |
+        pwd
+        ls -la
+        npm run build
+        ls -la
+
     - name: Use Node.js 20.x
       uses: actions/setup-node@v2
       with:
