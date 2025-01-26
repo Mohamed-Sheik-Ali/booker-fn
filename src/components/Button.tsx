@@ -8,7 +8,7 @@ interface ButtonProps {
   loaderColor?: string;
   key?: string | number;
 }
-
+// COMMENT
 const Button = ({
   text,
   type,
