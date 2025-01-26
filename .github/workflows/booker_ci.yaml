@@ -27,16 +27,21 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Verify build output
-      run: |
-          ls -la
-          ls -la dist
+    # - name: Verify build output
+    #   run: |
+    #       ls -la
+    #       ls -la dist
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
     timeout-minutes: 5
     steps:
+
+      - name: Verify build output
+        run: |
+          ls -la
+          ls -la dist
 
       - name: Deploy
         uses: nwtgck/actions-netlify@v3.0
@@ -51,4 +56,3 @@ jobs:
         env:
             NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
             NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-            timeout-minutes: 1
