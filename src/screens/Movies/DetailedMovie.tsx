@@ -39,7 +39,6 @@ const DetailedMovie: React.FC = () => {
   useEffect(() => {
     if (!movieId) return;
 
-
     (async () => {
       handleLoader(true);
       const { data } = await MovieService.getMovieById(movieId);

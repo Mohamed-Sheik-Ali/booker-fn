@@ -58,8 +58,6 @@ const MoviesList: React.FC = () => {
         ? moment(movie.release_date).format("YYYY-MM-DD") === release_date
         : true;
       
-      console.log(movie.release_date === release_date)
-
       const isUpcoming = moment(movie.release_date).isAfter(currentDate);
       const isRunning = moment(movie.release_date).isBefore(currentDate);
 
